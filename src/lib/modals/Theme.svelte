@@ -6,7 +6,7 @@
 
 <Modal on:close={() => {$modalShown = false}}>
     <h2 slot="header">Set Theme</h2>
-    <div slot="default">
+    <div slot="default" class="display: grid; grid-gap: 10px;">
         <button on:click={() => {
             const _user = $user;
 			_user.theme = "orange";
