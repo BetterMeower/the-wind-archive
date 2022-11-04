@@ -62,9 +62,11 @@
 			user.set(_user);
 			clm.updateProfile();
         }}>Purple</button>
-
-        <button on:click={() => {$modalShown = false}}>Close</button>
 	</div>
+
+    <div class="modal-buttons">
+        <button on:click={() => {$modalShown = false}}>Close</button>
+    </div>
 </Modal>
 
 <style>
