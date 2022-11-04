@@ -4,9 +4,9 @@
 	import {modalShown, user} from "../stores.js";
 </script>
 
-<Modal on:close={() => {$modalShown = false}}>
+<Modal on:close={() => {$modalShown = false}} class="display: grid; grid-gap: 10px;">
     <h2 slot="header">Set Theme</h2>
-    <div slot="default" class="display: grid; grid-gap: 10px;">
+    <div slot="default">
         <button on:click={() => {
             const _user = $user;
 			_user.theme = "orange";
