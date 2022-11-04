@@ -1,7 +1,7 @@
 <script>	
-	import Modal from "../Modal.svelte";
+    import Modal from "../Modal.svelte";
     import * as clm from "../clmanager.js";
-	import {modalShown, user} from "../stores.js";
+    import {modalShown, user} from "../stores.js";
 </script>
 
 <Modal on:close={() => {$modalShown = false}}>
@@ -67,6 +67,6 @@
         grid-template-columns: auto auto auto auto;
         grid-column-gap: 5px;
         grid-row-gap: 5px;
-        padding: 1px;
+        padding: 5px;
     }
 </style>
