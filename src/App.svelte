@@ -20,6 +20,7 @@
 	import ChangePasswordModal from "./lib/modals/ChangePassword.svelte";
 	import DeleteAccountModal from "./lib/modals/DeleteAccount.svelte";
 	import LogoutModal from "./lib/modals/Logout.svelte";
+	import ThemeModal from "./lib/modals/Theme.svelte";
 	import ErrorModal from "./lib/modals/Error.svelte";
 
 	import Spinner from "./lib/Spinner.svelte";
@@ -142,6 +143,8 @@
 			<RemoveMemberModal />
 		{:else if $modalPage === "logout"}
 			<LogoutModal />
+		{:else if $modalPage === "theme"}
+			<ThemeModal />
 		{:else}
 			<ErrorModal />
 		{/if}
