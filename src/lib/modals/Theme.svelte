@@ -4,7 +4,7 @@
 	import {modalShown, user} from "../stores.js";
 </script>
 
-<Modal on:close={() => {$modalShown = false}} class="display: grid; grid-gap: 10px;">
+<Modal on:close={() => {$modalShown = false}} class="display: grid; gap: 5px">
     <h2 slot="header">Set Theme</h2>
     <div slot="default">
         <button on:click={() => {
