@@ -73,5 +73,6 @@
         grid-template-columns: auto auto auto auto;
         grid-column-gap: 5px;
         grid-row-gap: 5px;
+        padding: 1px;
     }
 </style>
