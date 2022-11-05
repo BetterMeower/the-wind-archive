@@ -18,7 +18,7 @@
 	import {default as loadProfile, profileCache} from "../lib/loadProfile.js";
 	
 	import {onMount} from "svelte";
-	import {emojify} from "discord-emoji-converter";
+	import * as emoji from "shortcode2emoji";
 
 	export let post = {};
 	export let buttons = true;
@@ -128,7 +128,7 @@
 			{/if}
 		</div>
 	</div>
-	<p class="post-content">{emojify(post.content)}</p>
+	<p class="post-content">{emoji.replaceColons(post.content)}</p>
 </Container>
 
 <style>
