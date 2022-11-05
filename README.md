@@ -16,6 +16,8 @@ BetterMeower contains many new features and improvements over standard Meower, i
 
 ✅ Better support for small phones 🙃
 
+✅ Emoji Shortcodes
+
 ## Credits
 **Everyone who contributed to [meower-media-co/Meower-Svelte](https://github.com/meower-media-co/Meower-Svelte)** - Without Meower Svelte and it's contributors, this project wouldn't exist
 
