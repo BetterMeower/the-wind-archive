@@ -8,6 +8,12 @@
     Get the latest news about BetterMeower
 </Container>
 <Container>
+    <h2>November BetterMeower Update!</h2>
+    <p>5 November 2022 | JoshAtticus</p>
+    <hr>
+    <p>BetterMeower v1.4.1 is here! Now containing emoji shortcodes, such as :smile: and new PFPs!</p>
+</Container>
+<Container>
     <h2>v1.4.0 in development!</h2>
     <p>29 October 2022 | JoshAtticus</p>
     <hr>
