@@ -18,7 +18,7 @@
 	import {default as loadProfile, profileCache} from "../lib/loadProfile.js";
 	
 	import {onMount} from "svelte";
-	import * as emoji from "discord-emoji-converter";
+	import * as emoji from "node-emoji";
 
 	export let post = {};
 	export let buttons = true;
