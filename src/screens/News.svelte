@@ -5,7 +5,7 @@
 
 <Container>
     <h1>News</h1>
-    Get the latest news about BetterMeower
+    Get the latest news about BetterMeower.
 </Container>
 <Container>
     <h2>November BetterMeower Update!</h2>

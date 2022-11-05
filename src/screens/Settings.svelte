@@ -58,11 +58,8 @@
 		<button
 			class="circle settings"
 			on:click={()=>{
-				const _user = $user;
-				_user.theme = _user.theme === "orange" ? "blue" : "orange";
-				user.set(_user);
-
-				clm.updateProfile();
+				$modalPage = "theme";
+				$modalShown = true;
 			}}
 		></button>
 	</div>
