@@ -8,6 +8,12 @@
     Get the latest news about BetterMeower.
 </Container>
 <Container>
+    <h2>BetterMeower 1.4.2 bug fixes</h2>
+    <p>6 November 2022 | JoshAtticus</p>
+    <hr>
+    <p>BetterMeower v1.4.2 is here! This update fixes a bug with the Svelte base where messages from the Scratch client and edited bridge messages break auto-refresh for new posts.</p>
+</Container>
+<Container>
     <h2>November BetterMeower Update!</h2>
     <p>5 November 2022 | JoshAtticus</p>
     <hr>
