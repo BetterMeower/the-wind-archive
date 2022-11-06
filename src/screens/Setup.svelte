@@ -216,7 +216,7 @@
 				<p class="small">(Several features will be unavailable while not logged in.)</p>
 				<div>
 					<p class="small">
-						BetterMeower v1.4.1
+						BetterMeower v1.4.2
 					</p>
 					<img
 						src={meowy}
