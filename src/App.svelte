@@ -25,7 +25,6 @@
 
 	import Spinner from "./lib/Spinner.svelte";
 	import {link} from "./lib/clmanager.js";
-	import {mobile} from "./lib/responsiveness.js";
 	import {newNotification, requestPermission} from "./lib/notifications.js";
 
 	import {
@@ -53,8 +52,7 @@
 	class:mode-light={!($user.mode === false)}
 	class:mode-dark={$user.mode === false}
 
-	class:layout-old={$mobile || $user.layout === "old"}
-	class:layout-mobile={$mobile}
+	class:layout-old={$user.layout === "old"}
 >
 	{#if $disconnected}
 		<Modal>
@@ -200,7 +198,7 @@
 		--orange-light: #dd7f14;
 		--orange-dark: #ac4718;
 		--orange-scrollbar-back: rgb(131, 45, 5);
-		--background: #020010;
+		--background: #202020;
 		--foreground: #eef;
 		--foreground-orange: #eef;
 	}
