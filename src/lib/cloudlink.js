@@ -36,7 +36,7 @@ import {apiUrl} from "./urls.js";
  */
 
 /**
- * A JavaScript client for CloudLink servers. Basde off of CloudlinkJS.
+ * A JavaScript client for CloudLink servers. Based off of CloudlinkJS.
  */
 export default class Cloudlink {
     /**
