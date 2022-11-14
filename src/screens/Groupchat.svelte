@@ -162,7 +162,7 @@
 					playNotification();
 				}
 
-				if ($user.name !== cmd.val.u && !(document.hasFocus())) {
+				if ($user.name !== cmd.val.u) {
 					newNotification(cmd.val.p, `${cmd.val.u} in ${$chatName}`);
 				}
 			}
@@ -175,7 +175,7 @@
 					date: new Date().getTime()/1000,
 				});
 
-				if ($user.name !== cmd.val.u && !(document.hasFocus())) {
+				if ($user.name !== cmd.val.u) {
 					newNotification("", `${cmd.val.u} left ${$chatName}`);
 				}
             }
@@ -188,7 +188,7 @@
 					date: new Date().getTime()/1000,
 				});
 
-				if ($user.name !== cmd.val.u && !(document.hasFocus())) {
+				if ($user.name !== cmd.val.u) {
 					newNotification("", `${cmd.val.u} joined ${$chatName}`);
 				}
             }

@@ -134,7 +134,7 @@
 					playNotification();
 				}
 
-				if ($user.name !== cmd.val.u && !(document.hasFocus())) {
+				if ($user.name !== cmd.val.u) {
 					newNotification(cmd.val.p, cmd.val.u);
 				}
 			}
