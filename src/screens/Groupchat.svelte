@@ -163,7 +163,7 @@
 				}
 
 				if ($user.name !== cmd.val.u && !(document.hasFocus())) {
-					newNotification(cmd.val.p, "", `${cmd.val.u} in ${$chatName}`);
+					newNotification(cmd.val.p, `${cmd.val.u} in ${$chatName}`);
 				}
 			}
             if ($page === "groupchat" && cmd.val.state === 0) {
@@ -176,7 +176,7 @@
 				});
 
 				if ($user.name !== cmd.val.u && !(document.hasFocus())) {
-					newNotification("", "", `${cmd.val.u} left ${$chatName}`);
+					newNotification("", `${cmd.val.u} left ${$chatName}`);
 				}
             }
             if ($page === "groupchat" && cmd.val.state === 1) {
@@ -189,7 +189,7 @@
 				});
 
 				if ($user.name !== cmd.val.u && !(document.hasFocus())) {
-					newNotification("", "", `${cmd.val.u} joined ${$chatName}`);
+					newNotification("", `${cmd.val.u} joined ${$chatName}`);
 				}
             }
 			if (cmd.val.mode === "delete") {
