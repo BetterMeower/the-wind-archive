@@ -135,7 +135,7 @@
 				}
 
 				if ($user.name !== cmd.val.u && !(document.hasFocus())) {
-					newNotification(cmd.val.p, "", cmd.val.u);
+					newNotification(cmd.val.p, cmd.val.u);
 				}
 			}
 			if (cmd.val.mode === "delete") {
