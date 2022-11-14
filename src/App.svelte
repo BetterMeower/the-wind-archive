@@ -36,7 +36,7 @@
 	import {tick} from "svelte";
     import SetQuote from "./lib/modals/SetQuote.svelte";
 
-	requestPermission();
+	let notificationRequest = Notification.requestPermission();
 </script>
 
 <main
