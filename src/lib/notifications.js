@@ -5,6 +5,7 @@ export function newNotification(body, title) {
         body: body,
         icon: meowy
     };
-    const notification = new Notification(title, options);
-    return;
+    if (!(document.hasFocus())) {
+        const notification = new Notification(title, options);
+    }
 }
