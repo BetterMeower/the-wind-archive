@@ -6,7 +6,11 @@ export const mobile = writable(false);
 
 export function update() {
 	width.set(window.innerWidth);
-	height.set(window.innerHeight);
+	height.set(window.innerHeight)
+    mobile.set(
+		window.innerWidth < window.innerHeight ||
+		(window.innerWidth < 500 || window.innerHeight < 400)
+	);
 }
 
 update();
