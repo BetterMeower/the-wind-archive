@@ -26,7 +26,6 @@
 	import Spinner from "./lib/Spinner.svelte";
 	import {link} from "./lib/clmanager.js";
 	// import {newNotification} from "./lib/notifications.js";
-	import {mobile} from "./lib/responsiveness.js";
 
 	import {
 		screen, setupPage,
@@ -53,8 +52,7 @@
 	class:mode-light={!($user.mode === false)}
 	class:mode-dark={$user.mode === false}
 
-	class:layout-old={$mobile || $user.layout === "old"}
-	class:layout-mobile={$mobile}
+	class:layout-old={$user.layout === "old"}
 >
 	{#if $disconnected}
 		<Modal>

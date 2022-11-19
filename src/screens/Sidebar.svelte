@@ -1,4 +1,4 @@
-<!-- Wait, isn't it a topbar on old layout? -->
+<!-- Wait, isn't it a topbar on old layout? (no, at least not on mobile now :)-->
 <!-- RIP -->
 
 <script>
