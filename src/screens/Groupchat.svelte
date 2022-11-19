@@ -7,7 +7,7 @@
 	import {auth_header, user, chatName, chatMembers, chatid, ulist, spinner, mainPage as page, modalShown, modalPage, profileClicked_GC, lastTyped} from "../lib/stores.js";
 	import {shiftHeld} from "../lib/keyDetect.js";
     import {playNotification} from "../lib/sounds.js";
-	import {newNotification} from "../lib/notifications.js";
+	// import {newNotification} from "../lib/notifications.js";
 	import Post from "../lib/Post.svelte";
 	import Member from "../lib/Member.svelte";
 	import Container from "../lib/Container.svelte";

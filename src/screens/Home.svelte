@@ -7,7 +7,7 @@
 	import {user, ulist, spinner, lastTyped, mainPage as page} from "../lib/stores.js";
 	import {shiftHeld} from "../lib/keyDetect.js";
 	import {playNotification} from "../lib/sounds.js";
-	import {newNotification} from "../lib/notifications.js";
+	// import {newNotification} from "../lib/notifications.js";
 	import Post from "../lib/Post.svelte";
 	import Container from "../lib/Container.svelte";
 	import Loading from "../lib/Loading.svelte";
