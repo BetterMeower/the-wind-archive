@@ -25,7 +25,7 @@
 
 	import Spinner from "./lib/Spinner.svelte";
 	import {link} from "./lib/clmanager.js";
-	import {newNotification} from "./lib/notifications.js";
+	// import {newNotification} from "./lib/notifications.js";
 	import {mobile} from "./lib/responsiveness.js";
 
 	import {
@@ -37,7 +37,7 @@
 	import {tick} from "svelte";
     import SetQuote from "./lib/modals/SetQuote.svelte";
 
-	let notificationRequest = Notification.requestPermission();
+	// let notificationRequest = Notification.requestPermission();
 </script>
 
 <main
@@ -64,38 +64,38 @@
 			<div slot="default">
 				<p>
 					{#if $disconnectReason === ""}
-						{#if !(document.hasFocus())} {
+						<!-- {#if !(document.hasFocus())} {
 							newNotification("You were disconnected. Click on this notification to reconnect.", "Disconnected")
 							};
-						{/if}
+						{/if} -->
 						Something went wrong and the connection to Meower was lost.
 					{:else if $disconnectReason === "Failed to load userdata"}
 						An unexpected error occurred while trying to load your userdata! Check console for more information.
 					{:else if $disconnectReason === "E:119 | IP Blocked"}
-						{#if !(document.hasFocus())} {
+						<!-- {#if !(document.hasFocus())} {
 							newNotification("Your IP address has been blocked. If reconnecting does not work, try disabling any ad blockers and try again.", "IP Address blocked")
 							};
-						{/if}
+						{/if} -->
 						The server has blocked your IP address ({link.ip}).
 					{:else if $disconnectReason == "E:110 | ID conflict"}
-						{#if !(document.hasFocus())} {
+						<!-- {#if !(document.hasFocus())} {
 							newNotification("It looks like you signed in from another device. Log back into this device to continue recieving notifications, or change your password immedietely if this was not you.", "Sign in from another device detected")
 							};
-						{/if}
+						{/if} -->
 						There has been a hiccup! Looks like you logged into Meower from another device.
 						<br /><br />
 						Please check any devices currently logged into Meower and try again.
 					{:else if $disconnectReason == "E:018 | Account Banned"}
-						{#if !(document.hasFocus())} {
+						<!-- {#if !(document.hasFocus())} {
 							newNotification("Your account has been banned from Meower. Click this notification to learn more.", "Account Banned")
 							};
-						{/if}
+						{/if} -->
 						You have been banned by a moderator.
 					{:else if $disconnectReason == "E:020 | Kicked"}
-						{#if !(document.hasFocus())} {
+						<!-- {#if !(document.hasFocus())} {
 							newNotification("Your account was kicked by a moderator. Click on this notification to reconnect.", "Kicked")
 							};
-						{/if}
+						{/if} -->
 						You have been kicked by a moderator.
 					{:else}
 						We ran into an error trying to connect to the server.
