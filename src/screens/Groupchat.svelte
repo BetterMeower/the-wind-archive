@@ -17,6 +17,8 @@
 	import {link} from "../lib/clmanager.js";
 	import {apiUrl, encodeApiURLParams} from "../lib/urls.js";
 
+	import * as emoji from "node-emoji";
+
 	import {autoresize} from "svelte-textarea-autoresize";
 
 	import {fly} from "svelte/transition";
@@ -249,7 +251,7 @@
 							val: {
 								cmd: "post_chat",
 								val: {
-									p: e.target[0].value,
+									p: emoji.emojify(e.target[0].value),
 									chatid: $chatid,
 								},
 							},

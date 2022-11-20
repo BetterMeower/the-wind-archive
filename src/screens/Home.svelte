@@ -15,6 +15,8 @@
 	import {link} from "../lib/clmanager.js";
 	import {apiUrl, encodeApiURLParams} from "../lib/urls.js";
 
+	import * as emoji from "node-emoji";
+
 	import {autoresize} from "svelte-textarea-autoresize";
 
 	import {fly} from "svelte/transition";
@@ -183,7 +185,7 @@
 						cmd: "direct",
 						val: {
 							cmd: "post_home",
-							val: e.target[0].value,
+							val: emoji.emojify(e.target[0].value),
 						},
 						listener: "post_home",
 					});
