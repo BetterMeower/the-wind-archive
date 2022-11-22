@@ -19,7 +19,7 @@ BetterMeower contains many new features and improvements over standard Meower, i
 ✅ Emoji Shortcodes
 
 ## Credits
-**Everyone who contributed to [meower-media-co/Meower-Svelte](https://github.com/meower-media-co/Meower-Svelte)** - Without Meower Svelte and it's contributors, this project wouldn't exist
+**Everyone who contributed to [meower-media-co/Meower-Svelte](https://github.com/meower-media-co/Meower-Svelte)** - Without Meower Svelte and its contributors, this project wouldn't exist
 
 **[@ArrowAced](https://github.com/ArrowAced)** - For helping setup Cloudflare Pages
 
@@ -27,7 +27,7 @@ BetterMeower contains many new features and improvements over standard Meower, i
 
 **[@mdwalters](https://github.com/mdwalters)** - For testing, giving feedback, helping with 1.4.0 as well as the idea to make BetterMeower
 
-**[@Bloctans](https://github.com/Bloctans)** - For the idea to make BetterMeower, and helping me with npm and node.js.
+**[@Bloctans](https://github.com/Bloctans)** - For the idea to make BetterMeower, and for helping with npm and node.js.
 
 **[@webdev03](https://github.com/webdev03)** - For helping with npm and node.js.
 
@@ -35,10 +35,10 @@ BetterMeower contains many new features and improvements over standard Meower, i
 
 Requirements:
 - node.js and npm or some other package manager
-- git (optional, for cloning the repo)
+- git
 - Preferably understanding of JavaScript and node.js, among ~~us~~ other things
 
-To clone and run a development server on your machine (that autoupdates when you modify files):
+To clone and run a development server on your machine (that auto-updates when you modify files):
 
 ```
 git clone https://github.com/BetterMeower-Project/BetterMeower
@@ -57,7 +57,7 @@ npm run build
 
 ------
 
-Relevant bit of information from the original readme:
+The relevant bit of information from the original readme:
 
 > ## Recommended IDE Setup
 > [VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
