@@ -69,13 +69,13 @@
 
 	$: {
 		const _date = new Date(date * 1000);
-		text = epochToRelative(_date.getTime())
+		text = epochToRelative(_date.getTime());
 		title = `Time is in your local timezone (UTC+${-(_date.getTimezoneOffset()/60)}).
 12-hour time: ${_date.toLocaleString([], {hourCycle: "h11"})}
 24-hour time: ${_date.toLocaleString([], {hourCycle: "h23"})}
 ISO: ${_date.toISOString()}`;
 		setInterval(function() {
-			text = epochToRelative(_date.getTime())
+			text = epochToRelative(_date.getTime());
 		}, 1000)
 	}
 </script>
