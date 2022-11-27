@@ -76,7 +76,7 @@
 ISO: ${_date.toISOString()}`;
 		setInterval(function() {
 			text = epochToRelative(_date.getTime());
-		}, 1000)
+		}, 1000);
 	}
 </script>
 
