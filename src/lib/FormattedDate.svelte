@@ -19,10 +19,7 @@
     	var elapsed = current - timestamp;
 
     	if (elapsed < msPerMinute) {
-			var seconds = Math.round(elapsed/1000);
-			if (seconds.startsWith("-")) {
-				return "just now";
-			} else if (1 < Math.round(elapsed/1000)) {
+			if (1 < Math.round(elapsed/1000)) {
             	return `${Math.round(elapsed/1000)} seconds ago`; 
         	} else if (Math.round(elapsed/1000) == 0) {
 				return "just now";
