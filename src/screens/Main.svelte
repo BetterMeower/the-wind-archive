@@ -9,6 +9,7 @@
 	import Recent from "./Recent.svelte";
 	import Settings from "./Settings.svelte";
 	import Groupcat from "./Groupcat.svelte";	
+	import News from "./News.svelte";	
 
 	import Sidebar from "./Sidebar.svelte";
 
@@ -30,6 +31,8 @@
 			<Chatlist />
 		{:else if $page === "groupchat"}
 			<Groupchat />
+		{:else if $page === "news"}
+			<News />
 		{:else if $page === "profile"}
 			<Profile />
 		{:else if $page === "recent"}

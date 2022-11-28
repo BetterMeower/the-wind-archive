@@ -7,6 +7,7 @@
 	import {auth_header, user, chatName, chatMembers, chatid, ulist, spinner, mainPage as page, modalShown, modalPage, profileClicked_GC, lastTyped} from "../lib/stores.js";
 	import {shiftHeld} from "../lib/keyDetect.js";
     import {playNotification} from "../lib/sounds.js";
+	// import {newNotification} from "../lib/notifications.js";
 	import Post from "../lib/Post.svelte";
 	import Member from "../lib/Member.svelte";
 	import Container from "../lib/Container.svelte";
@@ -15,6 +16,8 @@
     import * as clm from "../lib/clmanager.js";
 	import {link} from "../lib/clmanager.js";
 	import {apiUrl, encodeApiURLParams} from "../lib/urls.js";
+
+	import * as emoji from "node-emoji";
 
 	import {autoresize} from "svelte-textarea-autoresize";
 
@@ -160,6 +163,10 @@
                 if ($user.sfx && cmd.val.u !== $user.name) {
 					playNotification();
 				}
+
+				if ($user.name !== cmd.val.u) {
+					newNotification(cmd.val.p, `${cmd.val.u} in ${$chatName}`);
+				}
 			}
             if ($page === "groupchat" && cmd.val.state === 0) {
                 if (!(cmd.val.chatid === $chatid)) return;
@@ -169,6 +176,10 @@
 					content: `${cmd.val.u} left ${$chatName}.`,
 					date: new Date().getTime()/1000,
 				});
+
+				if ($user.name !== cmd.val.u) {
+					newNotification("", `${cmd.val.u} left ${$chatName}`);
+				}
             }
             if ($page === "groupchat" && cmd.val.state === 1) {
                 if (!(cmd.val.chatid === $chatid)) return;
@@ -178,6 +189,10 @@
 					content: `${cmd.val.u} joined ${$chatName}!`,
 					date: new Date().getTime()/1000,
 				});
+
+				if ($user.name !== cmd.val.u) {
+					newNotification("", `${cmd.val.u} joined ${$chatName}`);
+				}
             }
 			if (cmd.val.mode === "delete") {
 				posts = posts.filter(post => post.post_id !== cmd.val.id);
@@ -236,7 +251,7 @@
 							val: {
 								cmd: "post_chat",
 								val: {
-									p: e.target[0].value,
+									p: emoji.emojify(e.target[0].value),
 									chatid: $chatid,
 								},
 							},

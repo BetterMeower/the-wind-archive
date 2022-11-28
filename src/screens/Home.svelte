@@ -7,12 +7,15 @@
 	import {auth_header, user, ulist, spinner, lastTyped, mainPage as page} from "../lib/stores.js";
 	import {shiftHeld} from "../lib/keyDetect.js";
 	import {playNotification} from "../lib/sounds.js";
+	// import {newNotification} from "../lib/notifications.js";
 	import Post from "../lib/Post.svelte";
 	import Container from "../lib/Container.svelte";
 	import Loading from "../lib/Loading.svelte";
 	import TypingIndicator from "../lib/TypingIndicator.svelte";
 	import {link} from "../lib/clmanager.js";
 	import {apiUrl, encodeApiURLParams} from "../lib/urls.js";
+
+	import * as emoji from "node-emoji";
 
 	import {autoresize} from "svelte-textarea-autoresize";
 
@@ -133,6 +136,10 @@
 				if ($user.sfx && cmd.val.u !== $user.name) {
 					playNotification();
 				}
+
+				if ($user.name !== cmd.val.u) {
+					newNotification(cmd.val.p, cmd.val.u);
+				}
 			}
 			if (cmd.val.mode === "delete") {
 				posts = posts.filter(post => post.post_id !== cmd.val.id);
@@ -179,7 +186,7 @@
 						cmd: "direct",
 						val: {
 							cmd: "post_home",
-							val: e.target[0].value,
+							val: emoji.emojify(e.target[0].value),
 						},
 						listener: "post_home",
 					});
