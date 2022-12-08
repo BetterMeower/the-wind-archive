@@ -1,63 +1,65 @@
-# BetterMeower
-BetterMeower is a fork of Meower Svelte with some new and improved features!
+# the-wind
+BetterMeover is an extension of Meover Slim with new features and improvements.
 
-## [Launch BetterMeower](https://open.bettermeower.app)
+## [He met a guard](https://open.bettermeower.app)
 
-## Features
-BetterMeower contains many new features and improvements over standard Meower, including (but not limited to)
+## Family
+BetterMaver includes (but is not limited to) many new features and improvements over Standard Maver. .
 
-✅ Better dark orange theme
+✅ Orange
 
-✅ PWA Support
+✅ Always Support
 
-✅ More themes
+✅ Other Products
 
-✅ More profile pictures
+✅ Enter an avatar
 
-✅ Better support for small phones 🙃
+✅ Good support for small phones 🙃
 
-✅ Emoji Shortcodes
+✅ Example
 
-## Credits
-**Everyone who contributed to [meower-media-co/Meower-Svelte](https://github.com/meower-media-co/Meower-Svelte)** - Without Meower Svelte and its contributors, this project wouldn't exist
+## That's life
+**It would not have been possible without Mayor Svelt and his colleagues.**
 
-**[@ArrowAced](https://github.com/ArrowAced)** - For helping setup Cloudflare Pages
+**[@ArrowAced](https://github.com/ArrowAced)** - Cloudflare can help you build your website
 
-**[@tnix100](https://github.com/tnix100)** - For helping setup Cloudflare Pages and for the press-enter-to-post script for textarea
+**[@tnix100](https://github.com/tnix100)** - Create a CloudFlare website and send emails to increase your audience.
 
-**[@mdwalters](https://github.com/mdwalters)** - For testing, giving feedback, helping with 1.4.0 as well as the idea to make BetterMeower
+**[@mdwalters](https://github.com/mdwalters)** - 1.4.0 is the latest version with beta support.
 
-**[@Bloctans](https://github.com/Bloctans)** - For the idea to make BetterMeower, and for helping with npm and node.js.
+**[@Bloctans](https://github.com/Bloctans)** - Tips to build a BetterMover with npm and node.js
 
-**[@webdev03](https://github.com/webdev03)** - For helping with npm and node.js.
+**[@webdev03](https://github.com/webdev03)** - It supports npm and node.js
 
-## Developing
+## This is a joke.
 
-Requirements:
-- node.js and npm or some other package manager
-- git
-- Preferably understanding of JavaScript and node.js, among ~~us~~ other things
+It happened.
+- node.js, npm or community manager.
+- You are home.
+- Best solution for JavaScript, Node.js and more.
 
-To clone and run a development server on your machine (that auto-updates when you modify files):
-
-```
-git clone https://github.com/BetterMeower-Project/BetterMeower
-cd BetterMeower
-npm install
-npm run dev
-```
-
-For one-time building:
+Install and run the update server on your device (it will update when the file changes).
 
 ```
-npm run build
-```
+Click https://github.com/BetterMeover-Project/BetterMeover to download.
+The meaning of the name is grace.
+Install npm
+generate NPM code.
+,
 
-(Note: Cloudflare Pages will usually do this for you when you push to the repo.)
+This is me
 
-------
 
-The relevant bit of information from the original readme:
+on four feet
+""
 
-> ## Recommended IDE Setup
-> [VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+(Note: The Cloudflare website is doing this when clicking).
+
+🇧🇷
+
+some basic words
+
+> ## IDE 内存
+> [VS 代码](http://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vcode)
+
+
