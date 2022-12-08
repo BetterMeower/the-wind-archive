@@ -1,4 +1,4 @@
-<!-- Meower Svelte, the app itself. -->
+<!-- said Moore Swift -->
 
 <script>
 	import Main from "./screens/Main.svelte";
@@ -66,37 +66,37 @@
 							newNotification("You were disconnected. Click on this notification to reconnect.", "Disconnected")
 							};
 						{/if} -->
-						Something went wrong and the connection to Meower was lost.
+						a sick cat
 					{:else if $disconnectReason === "Failed to load userdata"}
-						An unexpected error occurred while trying to load your userdata! Check console for more information.
+						An unexpected error occurred while loading user data. Visit this page for more details.
 					{:else if $disconnectReason === "E:119 | IP Blocked"}
 						<!-- {#if !(document.hasFocus())} {
 							newNotification("Your IP address has been blocked. If reconnecting does not work, try disabling any ad blockers and try again.", "IP Address blocked")
 							};
 						{/if} -->
-						The server has blocked your IP address ({link.ip}).
+						Your server's IP address has been blocked. ({link.ip}).
 					{:else if $disconnectReason == "E:110 | ID conflict"}
 						<!-- {#if !(document.hasFocus())} {
 							newNotification("It looks like you signed in from another device. Log back into this device to continue recieving notifications, or change your password immedietely if this was not you.", "Sign in from another device detected")
 							};
 						{/if} -->
-						There has been a hiccup! Looks like you logged into Meower from another device.
+						There is none! It looks like you are using Peacock on another computer.
 						<br /><br />
-						Please check any devices currently logged into Meower and try again.
+						Make sure your phone is connected to Meower and try again.
 					{:else if $disconnectReason == "E:018 | Account Banned"}
 						<!-- {#if !(document.hasFocus())} {
 							newNotification("Your account has been banned from Meower. Click this notification to learn more.", "Account Banned")
 							};
 						{/if} -->
-						You have been banned by a moderator.
+						helpless
 					{:else if $disconnectReason == "E:020 | Kicked"}
 						<!-- {#if !(document.hasFocus())} {
 							newNotification("Your account was kicked by a moderator. Click on this notification to reconnect.", "Kicked")
 							};
 						{/if} -->
-						You have been kicked by a moderator.
+						The player pays
 					{:else}
-						We ran into an error trying to connect to the server.
+						No se puede conectar de servidor a servidor.
 						<pre><code>{$disconnectReason}</code></pre>
 					{/if}
 				</p>
@@ -105,7 +105,7 @@
 					disconnected.set(false);
 					await tick();
 					setupPage.set("reconnect");
-				}}>Reconnect</button>
+				}}>¿El uno al otro?</button>
 			</div>
 		</Modal>
 	{/if}
