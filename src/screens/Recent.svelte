@@ -48,7 +48,7 @@
 					`${apiUrl}${path}${realPage}`
 				);
 				if (!resp.ok) {
-					throw new Error("Response code is not OK; code is " + resp.status);
+					throw new Error("error response code; abstractly " + resp.status);
 				}
 				const json = await resp.json();
 
@@ -63,7 +63,7 @@
 						`${apiUrl}${path}${realPage+1}`
 					);
 					if (!resp.ok) {
-						throw new Error("Overflow response code is not OK; code is " + resp.status);
+						throw new Error("angry response code; coding " + resp.status);
 					}
 					overflowJson = await overflowResp.json();
 
@@ -118,11 +118,11 @@
 		</div>
 	{:then}
 		<Container>
-			<h1>{$profileClicked}'s Recent Posts</h1>
-			Here are {$profileClicked}'s recent posts.
+			<h1>{$profileClicked}'s information</h1>
+			This is the last message sent by {$profileClicked}.
 		</Container>
 		{#if posts.length < 1}
-			{$profileClicked} hasn't made any posts yet.
+			{$profileClicked} has no messages yet.
 		{:else}
 			{#each posts as post (post.id)}
 				<div
@@ -142,15 +142,15 @@
 						class="load-more"
 						on:click={() => loadPage(pagesLoaded + 1)}
 					>
-						Load More
+						See more information
 					</button>
 				{/if}
 			{/if}
 		</div>
 	{:catch error}
 		<Container>
-			<h1>{$profileClicked}'s Recent Posts</h1>
-			Error loading posts. Please try again.
+			<h1>{$profileClicked}'s information</h1>
+			An error occurred while sending the SMS. Thanks again.
 			<pre><code>{error}</code></pre>
 		</Container>
 	{/await}
