@@ -1,5 +1,3 @@
-<!-- Where all the actual chatting action is. -->
-
 <script>
 	import Home from "./Home.svelte";
 	import Inbox from "./Inbox.svelte";
@@ -46,7 +44,7 @@
 		{:else if $page === "blank"}
 			<div></div>
 		{:else}
-			Somehow, you got to a page that doesn't exist...
+			You are on an unknown page...
 			<br />
 			(Current page: {$page})
 		{/if}
