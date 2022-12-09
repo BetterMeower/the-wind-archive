@@ -33,8 +33,8 @@
 	</form>
 -->
 <Container>
-	<h1>Settings</h1>
-	You can change your settings here. These will save to your account, so they will carry over into other clients.
+	<h1>almost none</h1>
+	Here you can change the settings. After registering your account, you can share it with other users.
 </Container>
 <Container>
 	<div class="settings-controls">
@@ -50,8 +50,8 @@
 		></button>
 	</div>
 
-	<h2>Layout</h2>
-	The layout is currently set to {$user.layout}.
+	<h2>send OFFER</h2>
+	    Current settings are set {$user.layout}.
 </Container>
 <Container>
 	<div class="settings-controls">
@@ -64,8 +64,8 @@
 		></button>
 	</div>
 
-	<h2>Theme</h2>
-	The theme is currently set to {$user.theme}.
+	<h2>matter</h2>
+	    That has also changed {$user.theme}.
 </Container>
 <Container>
 	<div class="settings-controls">
@@ -82,8 +82,8 @@
 		>
 	</div>
 
-	<h2>Dark Mode</h2>
-	Dark mode is currently {$user.mode ? "disabled" : "enabled"}.
+	<h2>on the street in the dark</h2>
+	Dark mode must be enabled {$user.mode ? "disabled" : "enabled"}.
 </Container>
 <Container>
 	<div class="settings-controls">
@@ -100,8 +100,8 @@
 		>
 	</div>
 
-	<h2>Sound Effects</h2>
-	Sound effects are currently {!$user.sfx ? "disabled" : "enabled"}.
+	<h2>Important</h2>
+	The health effects are already visible {!$user.sfx ? "disabled" : "enabled"}.
 </Container>
 {#if $user.name}
 <Container>
@@ -115,7 +115,7 @@
 		></button>
 	</div>
 
-	<h2>Change Password</h2>
+	<h2>you should change your password</h2>
 	Change your account password.
 </Container>
 <Container>
@@ -129,8 +129,8 @@
 		></button>
 	</div>
 
-	<h2>Delete Account</h2>
-	Permanently delete your Meower account. THIS CANNOT BE UNDONE.
+	<h2>terminate your account</h2>
+	Delete your Meower account permanently. It will not be extensive.
 </Container>
 {/if}
 
