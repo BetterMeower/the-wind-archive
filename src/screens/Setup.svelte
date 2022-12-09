@@ -1,4 +1,4 @@
-<!-- Boring orange screen with login and signup. -->
+<!-- Tired of the orange login and registration screen. -->
 
 <script>
 	import
@@ -57,7 +57,7 @@
 				logo.classList.add("top");
 
 				await sleep(700);
-				loginStatus = "Connecting...";
+				loginStatus = "Log in now...";
 				await connect();
 
 				if (localStorage.getItem("meower_savedusername") && localStorage.getItem("meower_savedpassword")) {
@@ -94,7 +94,7 @@
 	*/
 	function doLogin(username, password, autoLogin = false) {
 		try {
-			loginStatus = "Logging in...";
+			loginStatus = "Please give me your name; Please contact us...";
 			clm.meowerRequest({
 				cmd: "direct",
 				val: {
@@ -128,17 +128,17 @@
 				} catch(e) {
 					localStorage.clear();
 					console.error("Unexpected " + e + " error getting user data!");
-					link.disconnect(1000, "Failed to load userdata");
+					link.disconnect(1000, "No user information found");
 				}
 			}).catch(code => {
 				if (autoLogin) return mainSetup();
 
 				switch (code) {
 					case "E:103 | ID not found":
-						loginStatus = "Invalid username!";
+						loginStatus = "wrong name!";
 						break;
 					case "I:011 | Invalid Password":
-						loginStatus = "Invalid password!";
+						loginStatus = "Wrong password!";
 						break;
 					case "E:018 | Account Banned":
 						$modalPage = "banned";
@@ -146,10 +146,10 @@
 						loginStatus = "";
 						break;
 					case "E:019 | Illegal characters detected":
-						loginStatus = "Usernames must not have spaces or other special characters!";
+						loginStatus = "No spaces or other special characters!";
 						break;
 					case "E:106 | Too many requests":
-						loginStatus = "Too many requests! Please try again later.";
+						loginStatus = "Lots of medicine! Please try again soon.";
 						break;
 					default:
 						loginStatus = `Unexpected ${code} error!`;
@@ -159,7 +159,7 @@
 			if (autoLogin) return mainSetup();
 
 			console.error(e);
-			loginStatus = "Error logging in: " + e;
+			loginStatus = "error confirmation: " + e;
 		}
 	}
 </script>
@@ -171,7 +171,7 @@
 				<div class="logo top" bind:this={logo}>
 					<img
 						bind:this={logoImg}
-						alt="Meower"
+						alt="arrival"
 						src={meowerLogo}
 						class="logo-img"
 						height="40"
@@ -182,22 +182,22 @@
 		</div>
 	{:else if $page === "reconnect"}
 		<div class="fullcenter">
-			Reconnecting...
+			again...
 		</div>
 	{:else if $page === "welcome"}
 		<div class="fullcenter">
 			<div class="column-ui">
 				<div>
 					<img
-						alt="Meower"
+						alt="arrival"
 						src={meowerLogo}
 						class="logo-img"
 						height="70"
 					/>
 					<br /><br />
 				</div>
-				<button on:click={() => page.set("login")}>Log in</button> <br />
-				<button on:click={() => page.set("join")}>Create an account</button> <br />
+				<button on:click={() => page.set("login")}>Changes</button> <br />
+				<button on:click={() => page.set("join")}>Open an account</button> <br />
 				{#if localStorage.getItem("meower_savedusername")}
 					<button on:click={() => {
 						rememberMe = true;
@@ -205,18 +205,18 @@
 							localStorage.getItem("meower_savedusername"),
 							localStorage.getItem("meower_savedpassword"),
 						)
-					}}>Use saved login ({localStorage.getItem("meower_savedusername")})</button>
+					}}>Register with your registered information ({localStorage.getItem("meower_savedusername")})</button>
 					<p class="small">{loginStatus}</p>
 				{/if}
 				<button on:click={() => {
 					loginStatus = "";
 					page.set("blank");
 					screen.set("main");
-				}}>Skip</button>
-				<p class="small">(Several features will be unavailable while not logged in.)</p>
+				}}>fly</button>
+				<p class="small">(Many features won't be available until you get started.)</p>
 				<div>
 					<p class="small">
-						BetterMeower v1.4.2
+						Better Recovery v1.4.2
 					</p>
 					<img
 						src={meowy}
@@ -228,12 +228,12 @@
 		</div>
 	{:else if $page === "login"}
 		<div class="fullcenter">
-			<h1>Login to Meower</h1>
+			<h1>will meow</h1>
 			
 			<form class="column-ui"
 				on:submit|preventDefault={e => {
 					if (!(e.target[0].value && e.target[1].value)) {
-						loginStatus = "You must specify a username and a password to login!";
+						loginStatus = "You must enter your username and password!";
 						return false;
 					}
 					doLogin(
@@ -243,12 +243,12 @@
 					return false;
 				}}
 			>
-				<input type="text" placeholder="Username" maxlength="20"> <br />
-				<input type="password" placeholder="Password" maxlength="64">
+				<input type="text" placeholder="user name" maxlength="20"> <br />
+				<input type="password" placeholder="the password" maxlength="64">
 				<p class="checkboxes">
 					<input id="remember-me" type="checkbox" bind:checked={rememberMe}>
 					<label for="remember-me">
-						Save this login
+						save this message
 					</label>
 				</p>
 				<span class="login-status">{loginStatus}</span>
@@ -257,25 +257,25 @@
 						page.set("welcome");
 						loginStatus = "";
 						return false;
-					}}>Go back</button>
-					<button type="submit">Log in</button>
+					}}>change</button>
+					<button type="submit">the law</button>
 				</div>
 			</form>
 		</div>
 	{:else if $page === "join"}
 		<div class="fullcenter">
-			<h1>Welcome to Meower</h1>
+			<h1>it almost tastes good</h1>
 
 			<form class="column-ui"
 				on:submit|preventDefault={e => {
 					const username = e.target[0].value;
 					const password = e.target[1].value;
 					if (!(username && password)) {
-						loginStatus = "You must specify a username and a password to create an account!";
+						loginStatus = "You must create a username and password!";
 						return false;
 					}
 
-					loginStatus = "Creating account..."
+					loginStatus = "Create account..."
 
 					clm.meowerRequest({
 						cmd: "direct",
@@ -289,7 +289,7 @@
 						listener: "join",
 					}).then(async val => {
 						if (val.mode === "auth" && val.payload.username === username) {
-							loginStatus = "Getting user data...";
+							loginStatus = "Searching for user data...";
 							const profileVal = await clm.meowerRequest({
 								cmd: "direct",
 								val: {
@@ -314,7 +314,7 @@
 							await sleep(1000);
 							screen.set("main");
 						} else {
-							loginStatus = "Unexpected error logging in!";
+							loginStatus = "Unexpected connection error!";
 						}
 					}).catch(code => {
 						switch (code) {
@@ -322,7 +322,7 @@
 								loginStatus = "That username already exists!";
 								break;
 							case "I:011 | Invalid Password":
-								loginStatus = "Invalid password!";
+								loginStatus = "Wrong password!";
 								break;
 							case "E:119 | IP Blocked":
 								$modalPage = "ipBanned";
@@ -330,10 +330,10 @@
 								loginStatus = "";
 								break;
 							case "E:019 | Illegal characters detected":
-								loginStatus = "Usernames must not have spaces or other special characters!";
+								loginStatus = "Contains no spaces or special characters.";
 								break;
 							case "E:106 | Too many requests":
-								loginStatus = "Too many requests! Please try again later.";
+								loginStatus = "So many questions! Please try again later.";
 								break;
 							default:
 								loginStatus = `Unexpected ${code} error!`;
@@ -341,19 +341,19 @@
 					});
 				}}
 			>
-				<input type="text" placeholder="Username" maxlength="20"> <br />
-				<input type="password" placeholder="Password" maxlength="64">
+				<input type="text" placeholder="Stress" maxlength="20"> <br />
+				<input type="password" placeholder="important principles" maxlength="64">
 				<p class="checkboxes">
 					<input id="remember-me" type="checkbox" bind:checked={rememberMe}>
 					<label for="remember-me">
-						Save this login
+						for this post
 					</label>
 					<br />
 					<input id="accept-terms" type="checkbox" bind:checked={acceptTerms}>
 					<label for="accept-terms">
-						I agree to <a
+						theory <a
 							href="https://meower.org/legal" target="_blank"
-						>Meower's Terms of Service and Privacy Policy</a>
+						>Meower Terms and conditions and data protection</a>
 					</label>
 				</p>
 				<span class="login-status">{loginStatus}</span>
@@ -362,24 +362,24 @@
 						page.set("welcome");
 						loginStatus = "";
 						return false;
-					}}>Go back</button>
-					<button type="submit" disabled={!acceptTerms}>Join!</button>
+					}}>a passenger</button>
+					<button type="submit" disabled={!acceptTerms}>That's right!</button>
 				</div>
 			</form>
 		</div>
 	{:else if $page === "blank"}
 		<div></div>
 	{:else if $page === "go"}
-		<div class="fullcenter">Let's go!</div>
+		<div class="fullcenter">Next!</div>
 	{:else}
 		<div class="fullcenter">
 			<div class="column-ui">
-				Somehow, you got to a page that doesn't exist...
+				Landed on this page for some reason….
 				<br />
 				(Current page: {$page})
 
 				<div class="buttons">
-					<button on:click={()=>page.set("logo")}>Go back!</button>
+					<button on:click={()=>page.set("logo")}>a passenger</button>
 				</div>
 			</div>
 		</div>
