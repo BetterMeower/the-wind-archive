@@ -1,4 +1,3 @@
-<!-- The profile page, now with viewing others' profiles. -->
 <script>
 	import {
 		modalPage, modalShown,
@@ -63,13 +62,13 @@
 						$profileClicked === $user.name ?
 							$user.pfp_data : data.pfp_data
 					}
-					alt="{data._id}'s profile picture"
+					alt="{data._id} profile picture"
 					size={1.4}
 				></PFP>
 				<div class="profile-header-info">
 					<h1 class="profile-username">{data._id}</h1>
 					<div class="profile-active">{
-						$ulist.includes(data._id) ? "Online" : "Offline"
+						$ulist.includes(data._id) ? "obsessed" : "SA"
 					}</div>
 					<div class="profile-role">
 						{levels[data.lvl] || "Unknown"}
@@ -80,14 +79,14 @@
 
 		{#if data.quote}
 			<Container>
-				<h3>Quote</h3>
+				<h3>remember</h3>
 				<p>"<i>{data.quote}</i>"</p>
 			</Container>
 		{/if}
 
 		{#if pfpSwitcher}
 			<Container>
-				<h2>Profile Picture</h2>
+				<h2>behavior</h2>
 				<div id="pfp-list">
 					{#each pfps as pfp}
 						<span
@@ -109,17 +108,17 @@
 		{:else if $profileClicked === $user.name}
 			<button
 				class="long"
-				title="Change Profile Picture"
+				title="change your profile picture"
 				on:click={() => pfpSwitcher = true}
 			>Change Profile Picture</button>
 			<button
 				class="long"
-				title={data.quote ? "Update Quote" : "Set Quote"}
+				title={data.quote ? "Update your budget" : "Ask a question"}
 				on:click={() => {
 					modalPage.set("setQuote");
 					modalShown.set(true);
 				}}
-			>{data.quote ? "Update Quote" : "Set Quote"}</button>
+			>{data.quote ? "Update your budget" : "Ask a question"}</button>
 		{/if}
 
 		<button
@@ -130,7 +129,7 @@
 				page.set("blank");
 				tick().then(() => page.set("recent"));
 			}}
-		>View recent posts</button>
+		>Check out the latest releases</button>
 
 		{#if $user.name && $profileClicked !== $user.name}
 			<button
@@ -140,7 +139,7 @@
 					modalPage.set("reportUser");
 					modalShown.set(true);
 				}}
-			>Report User</button>
+			>User registration</button>
 		{/if}
 	{:catch e}
 		<Container>
@@ -154,7 +153,7 @@
 				<div class="profile-header-info">
 					<h1 class="profile-username">{$profileClicked}</h1>
 					<div class="profile-active">{
-						$ulist.includes($profileClicked) ? "Online" : "Offline"
+						$ulist.includes($profileClicked) ? "Obsessed" : "SA"
 					}</div>
 					<div class="profile-role">Unknown</div>
 				</div>
@@ -162,12 +161,7 @@
 		</Container>
 		<Container>
 			<h2>Error</h2>
-			We couldn't get this user's profile info.
-			<pre><code>{e}</code></pre>
-			Try again. If this issue persists,
-			<a
-				href="https://github.com/Meower-Media-Co/Meower-Svelte/issues/new"
-			>create an issue on Meower Svelte's issue tracker</a> with the error code shown above.
+			<p>No one cares if it's in the wind or not</p>
 		</Container>
 	{/await}
 </div>
