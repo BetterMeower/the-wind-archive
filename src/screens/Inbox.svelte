@@ -1,8 +1,3 @@
-<!--
-	The inbox page!
-	It features messages sent to the user's inbox.
--->
-
 <script>
 	import {auth_header, user} from "../lib/stores.js";
 	import Post from "../lib/Post.svelte";
@@ -128,7 +123,7 @@
 		</div>
 	{:then}
 		<Container>
-			<h1>Inbox Messages</h1>
+			<h1>from e-mail to mailbox</h1>
 			Here are your latest inbox messages. We will send announcements and moderator messages to here!
 		</Container>
 		{#if posts.length < 1}
@@ -152,14 +147,14 @@
 						class="load-more"
 						on:click={() => loadPage(pagesLoaded + 1)}
 					>
-						Load More
+						Find more information
 					</button>
 				{/if}
 			{/if}
 		</div>
 	{:catch error}
 		<Container>
-			<h1>Inbox Messages</h1>
+			<h1>from e-mail to mailbox</h1>
 			Error loading messages. Please try again.
 			<pre><code>{error}</code></pre>
 		</Container>
