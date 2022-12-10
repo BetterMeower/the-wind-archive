@@ -177,9 +177,9 @@
 	{/if}
 	{#if toLeaveChat}
 		<Modal on:close={() => {toLeaveChat = false}}>
-			<h2 slot="header">Leave Chat</h2>
+			<h2 slot="header">you don't say</h2>
 			<div slot="default">
-				<span>Are you sure you want to leave {$chatName}?</span>
+				<span>Are you sure you want to do this? {$chatName}?</span>
 				<br /><br />
 				<div class="modal-buttons">
 					<button on:click={() => {
