@@ -165,7 +165,7 @@
 		</div>
 	{:then}
 		<Container>
-			<h1>Home</h1>
+			<h1>house</h1>
 			Today it is the same {_ulist.length} for Internet users{#if _ulist.length}{" "}({_ulist.join(", ")}){/if}.
 		</Container>
 		{#if $user.name}
@@ -175,7 +175,7 @@
 				on:submit|preventDefault={e => {					
 					postErrors = "";
 					if (!e.target[0].value.trim()) {
-						postErrors = "You cannot send an empty post!";
+						postErrors = "You cannot write empty messages!";
 						return false;
 					};
 
@@ -202,9 +202,9 @@
 							e.target[0].rows = "1";
 							e.target[0].style.height = "45px";
 						} else if (cmd.val === "E:106 | Too many requests") {
-							postErrors = "You're posting too fast!";
+							postErrors = "Browse quickly!";
 						} else {
-							postErrors = "Unexpected " + cmd.val + " error!";
+							postErrors = "This is obviously not true " + cmd.val + " Mistake!";
 						}
 					});
 					return false;
