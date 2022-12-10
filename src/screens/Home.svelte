@@ -251,9 +251,9 @@
 		<TypingIndicator />
 		{#if posts.length < 1}
 			{#if $user.name}
-				No posts here. Check back later or be the first to post!
+				No text. Be the first to see or write!
 			{:else}
-				No posts here. Check back later!
+				No text. Im slow!
 			{/if}
 		{:else}
 			{#each posts as post (post.id)}
@@ -282,7 +282,7 @@
 	{:catch error}
 		<Container>
 			<h1>Home</h1>
-			Error loading posts. Please try again.
+			An error occurred while loading the message. one more time please
 			<pre><code>{error}</code></pre>
 		</Container>
 	{/await}
