@@ -91,8 +91,8 @@
 		</div>
 	{:else}
 		<Container>
-			<h1>Chats</h1>
-			Here are your chats. Press the chat button to enter a chat.
+			<h1>they talk together</h1>
+			Negotiations are still ongoing. Click on chat to enter the chat.
 			<div class="settings-controls">
 				<button
 					class="circle plus"
@@ -119,8 +119,8 @@
 				></button>
 			</div>
 
-			<h1>Livechat</h1>
-			This is the public livechat. Messages in this chat don't save.
+			<h1>cartoon cat</h1>
+			This is a public call. The system does not store direct messages.
 		</Container>
         {#each chats as chat (chat._id)}
             <div
@@ -152,7 +152,7 @@
                     </div>
 
                     <h1>{chat.nickname}</h1>
-                    Members: {
+                    Member: {
 						chat.members.length > 100 ? (
 							chat.members.slice(0, 99).join(", ") + "..."
 						) : chat.members.join(", ")
@@ -169,7 +169,7 @@
 						class="load-more"
 						on:click={() => loadPage(pagesLoaded + 1)}
 					>
-						Load More
+						download more
 					</button>
 				{/if}
 			{/if}
