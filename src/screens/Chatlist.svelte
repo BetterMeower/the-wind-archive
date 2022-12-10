@@ -119,7 +119,7 @@
 				></button>
 			</div>
 
-			<h1>cartoon cat</h1>
+			<h1>living cat</h1>
 			This is a public call. The system does not store direct messages.
 		</Container>
         {#each chats as chat (chat._id)}
