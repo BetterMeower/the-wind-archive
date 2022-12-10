@@ -244,7 +244,7 @@
 					}}
 					bind:this={postInput}
 				></textarea>
-				<button id="submitpost">Post</button>
+				<button id="submitpost">circle</button>
 			</form>
 			<div class="post-errors">{postErrors}</div>
 		{/if}
