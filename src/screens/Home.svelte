@@ -1,6 +1,6 @@
 <!--
-	The home page!
-	It features live post updates and a load more button which is pretty nice.
+	Home!
+	Direct messages and a more functional Read More button.
 -->
 
 <script>
@@ -30,24 +30,24 @@
 	let numPages = null;
 	let postErrors = "";
 
-	// As we use a Load More button and the home is sorted newest-first,
-	// we need an offset for posts to be continuous.
+	// If we use the "Next" button, the item and factory will appear in the final list;
+	// We like to update the information from time to time.
 	let postOffset = 0;
 
 	let postInput;
 
 	/**
-	 * Loads a page, with offset and overflow calculations.
+	 * Desktop pages are slow and load frequently.
 	 * 
-	 * @param {number} [page] The page to load. If not present, simply clears the posts.
-	 * @returns {Promise<array>} The posts array.
+	 * @param {number} [page] Then send. if it's smaller, send it.
+	 * @returns {Promise<array>} visit
 	 */
 	async function loadPage(page) {
 		pageLoading = true;
 		if (page === undefined) {
 			posts = [];
 		} else {
-			// 25 posts per page...
+			// 25 comments on the page...
 			let realPage = page + Math.floor(postOffset / 25);
 			let realOffset = postOffset % 25;
 
@@ -106,7 +106,7 @@
 	}
 
 	/**
-	 * Adds a post to the list.
+	 * Add items to the list.
 	 * 
 	 * @param {object} post
 	 */
@@ -166,7 +166,7 @@
 	{:then}
 		<Container>
 			<h1>Home</h1>
-			There are currently {_ulist.length} user(s) online{#if _ulist.length}{" "}({_ulist.join(", ")}){/if}.
+			Today it is the same {_ulist.length} for Internet users{#if _ulist.length}{" "}({_ulist.join(", ")}){/if}.
 		</Container>
 		{#if $user.name}
 			<form 
